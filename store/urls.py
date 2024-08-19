@@ -3,6 +3,7 @@ from .views.signup import Signup
 from.views.home import Index
 from.views.cart import Cart
 from.views.checkout import CheckOut
+from.views.orders import OrderView
 from django.urls import path
 
 
@@ -12,7 +13,8 @@ urlpatterns=[
     path('login/',Login.as_view(),name="login"),
     path('Logout/',Logout,name="logout"),
     path('cart/',Cart.as_view(),name="cart"),
-    path('check-out',CheckOut.as_view(),name="checkout")
+    path('check-out',CheckOut.as_view(),name="checkout"),
+    path('orderView',OrderView.as_view(),name="order")
 ]
 
 
